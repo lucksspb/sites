@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lucas Pitaoborba — Portfólio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#" class="logo">LP<span>.</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Início</a></li>
+        <li><a href="#about">Sobre</a></li>
+        <li><a href="#portfolio">Portfólio</a></li>
+        <li><a href="#contact">Contato</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <canvas id="heroCanvas"></canvas>
+    <div class="hero-content">
+      <p class="hero-greeting">Olá, sou o <span class="highlight">Lucas</span></p>
+      <h1 class="hero-title">Desenvolvedor<br><span class="highlight">Front-End</span></h1>
+      <p class="hero-subtitle">Crio experiências digitais únicas, unindo design elegante e código funcional</p>
+      <div class="hero-buttons">
+        <a href="#portfolio" class="btn btn-primary">Ver Projetos</a>
+        <a href="#contact" class="btn btn-outline">Falar comigo</a>
+      </div>
+      <div class="hero-social">
+        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <div class="mouse">
+        <div class="wheel"></div>
+      </div>
+      <span>Role para baixo</span>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Sobre Mim</span>
+        <h2>Minha História</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-image">
+          <div class="image-wrapper">
+            <div class="image-placeholder">
+              <i class="fas fa-user"></i>
+            </div>
+            <div class="accent-border"></div>
+          </div>
+        </div>
+        <div class="about-text">
+          <p class="about-lead">Sou um desenvolvedor apaixonado por transformar ideias em realidade através da web.</p>
+          <p>Com experiência em desenvolvimento front-end, adoro criar interfaces que não apenas funcionam perfeitamente, mas que encantam quem as utiliza. Cada projeto é uma oportunidade de aprender algo novo e superar limites.</p>
+          <p>Minha jornada começou com curiosidade sobre como os sites funcionam e nunca parou de crescer. Hoje, combino habilidades técnicas com um olhar criativo para entregar resultados que fazem diferença.</p>
+          <div class="skills">
+            <div class="skill-tag">HTML5</div>
+            <div class="skill-tag">CSS3</div>
+            <div class="skill-tag">JavaScript</div>
+            <div class="skill-tag">React</div>
+            <div class="skill-tag">TypeScript</div>
+            <div class="skill-tag">Tailwind</div>
+            <div class="skill-tag">Node.js</div>
+            <div class="skill-tag">UI/UX</div>
+          </div>
+          <a href="#" class="btn btn-primary btn-sm">Baixar CV</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="stats">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <span class="stat-number" data-target="50">0</span>
+          <span class="stat-label">Projetos Entregues</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="30">0</span>
+          <span class="stat-label">Clientes Felizes</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="5">0</span>
+          <span class="stat-label">Anos de Experiência</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="100">0</span>
+          <span class="stat-label">Desafios Vencidos</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO -->
+  <section class="portfolio" id="portfolio">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Portfólio</span>
+        <h2>Projetos em Destaque</h2>
+      </div>
+      <div class="filter-bar">
+        <button class="filter-btn active" data-filter="all">Todos</button>
+        <button class="filter-btn" data-filter="web">Web Apps</button>
+        <button class="filter-btn" data-filter="design">Design</button>
+        <button class="filter-btn" data-filter="mobile">Mobile</button>
+      </div>
+      <div class="portfolio-grid" id="portfolioGrid">
+        <div class="portfolio-card" data-category="web">
+          <div class="card-image">
+            <div class="image-placeholder-purple">
+              <i class="fas fa-shopping-cart"></i>
+            </div>
+            <div class="card-overlay">
+              <div class="overlay-content">
+                <h3>E-Commerce Pro</h3>
+                <p>Plataforma de e-commerce completa com pagamento integrado</p>
+                <div class="overlay-tags">
+                  <span>React</span><span>Node.js</span><span>MongoDB</span>
+                </div>
+                <div class="card-links">
+                  <a href="#" aria-label="Ver projeto"><i class="fas fa-external-link-alt"></i></a>
+                  <a href="#" aria-label="Código fonte"><i class="fab fa-github"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-info">
+            <h4>E-Commerce Pro</h4>
+            <span class="card-category">Web App</span>
+          </div>
+        </div>
+
+        <div class="portfolio-card" data-category="design">
+          <div class="card-image">
+            <div class="image-placeholder-pink">
+              <i class="fas fa-paint-brush"></i>
+            </div>
+            <div class="card-overlay">
+              <div class="overlay-content">
+                <h3>Brand Identity Studio</h3>
+                <p>Redesign completo de identidade visual para startup</p>
+                <div class="overlay-tags">
+                  <span>Figma</span><span>Illustrator</span><span>CSS</span>
+                </div>
+                <div class="card-links">
+                  <a href="#" aria-label="Ver projeto"><i class="fas fa-external-link-alt"></i></a>
+                  <a href="#" aria-label="Código fonte"><i class="fab fa-github"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-info">
+            <h4>Brand Identity Studio</h4>
+            <span class="card-category">Design</span>
+          </div>
+        </div>
+
+        <div class="portfolio-card" data-category="mobile">
+          <div class="card-image">
+            <div class="image-placeholder-blue">
+              <i class="fas fa-mobile-alt"></i>
+            </div>
+            <div class="card-overlay">
+              <div class="overlay-content">
+                <h3>FitLife App</h3>
+                <p>App de monitoramento de fitness com gamificação</p>
+                <div class="overlay-tags">
+                  <span>React Native</span><span>Firebase</span><span>SVG</span>
+                </div>
+                <div class="card-links">
+                  <a href="#" aria-label="Ver projeto"><i class="fas fa-external-link-alt"></i></a>
+                  <a href="#" aria-label="Código fonte"><i class="fab fa-github"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-info">
+            <h4>FitLife App</h4>
+            <span class="card-category">Mobile</span>
+          </div>
+        </div>
+
+        <div class="portfolio-card" data-category="web">
+          <div class="card-image">
+            <div class="image-placeholder-dark">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <div class="card-overlay">
+              <div class="overlay-content">
+                <h3>Dashboard Analytics</h3>
+                <p>Dashboard interativo de analytics em tempo real</p>
+                <div class="overlay-tags">
+                  <span>Vue.js</span><span>D3.js</span><span>Express</span>
+                </div>
+                <div class="card-links">
+                  <a href="#" aria-label="Ver projeto"><i class="fas fa-external-link-alt"></i></a>
+                  <a href="#" aria-label="Código fonte"><i class="fab fa-github"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-info">
+            <h4>Dashboard Analytics</h4>
+            <span class="card-category">Web App</span>
+          </div>
+        </div>
+
+        <div class="portfolio-card" data-category="design">
+          <div class="card-image">
+            <div class="image-placeholder-rose">
+              <i class="fas fa-layer-group"></i>
+            </div>
+            <div class="card-overlay">
+              <div class="overlay-content">
+                <h3>Design System UI</h3>
+                <p>Sistema de design escalável com componentes reutilizáveis</p>
+                <div class="overlay-tags">
+                  <span>Storybook</span><span>TypeScript</span><span>CSS</span>
+                </div>
+                <div class="card-links">
+                  <a href="#" aria-label="Ver projeto"><i class="fas fa-external-link-alt"></i></a>
+                  <a href="#" aria-label="Código fonte"><i class="fab fa-github"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-info">
+            <h4>Design System UI</h4>
+            <span class="card-category">Design</span>
+          </div>
+        </div>
+
+        <div class="portfolio-card" data-category="mobile">
+          <div class="card-image">
+            <div class="image-placeholder-ultra">
+              <i class="fas fa-utensils"></i>
+            </div>
+            <div class="card-overlay">
+              <div class="overlay-content">
+                <h3>FoodExpress</h3>
+                <p>App de delivery com rastreamento em tempo real</p>
+                <div class="overlay-tags">
+                  <span>Flutter</span><span>Node.js</span><span>Mapbox</span>
+                </div>
+                <div class="card-links">
+                  <a href="#" aria-label="Ver projeto"><i class="fas fa-external-link-alt"></i></a>
+                  <a href="#" aria-label="Código fonte"><i class="fab fa-github"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-info">
+            <h4>FoodExpress</h4>
+            <span class="card-category">Mobile</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Contato</span>
+        <h2>Vamos Trabalhar Juntos</h2>
+        <p class="section-desc">Tem um projeto em mente? Estou sempre aberto a novas oportunidades e desafios.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+            <div>
+              <h4>E-mail</h4>
+              <p>lucas@pitaoborba.dev</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-phone"></i></div>
+            <div>
+              <h4>Telefone</h4>
+              <p>+55 (11) 99999-9999</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div>
+              <h4>Localização</h4>
+              <p>São Paulo, SP — Brasil</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-clock"></i></div>
+            <div>
+              <h4>Disponibilidade</h4>
+              <p>Seg a Sex, 9h — 18h</p>
+            </div>
+          </div>
+          <div class="contact-socials">
+            <a href="#" class="contact-social" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="#" class="contact-social" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="contact-social" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+            <a href="#" class="contact-social" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="contact-social" aria-label="Dribbble"><i class="fab fa-dribbble"></i></a>
+          </div>
+        </div>
+        <form class="contact-form" id="contactForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Nome</label>
+              <input type="text" id="name" name="name" placeholder="Seu nome" required>
+            </div>
+            <div class="form-group">
+              <label for="email">E-mail</label>
+              <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="subject">Assunto</label>
+            <input type="text" id="subject" name="subject" placeholder="Assunto da mensagem">
+          </div>
+          <div class="form-group">
+            <label for="message">Mensagem</label>
+            <textarea id="message" name="message" rows="5" placeholder="Conte-me sobre seu projeto..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">
+            <span class="btn-text">Enviar Mensagem</span>
+            <span class="btn-loader"></span>
+          </button>
+          <div class="form-success" id="formSuccess" style="display:none;">
+            <i class="fas fa-check-circle"></i>
+            <p>Mensagem enviada com sucesso! Entrarei em contato em breve.</p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="logo">LP<span>.</span></a>
+          <p>Criando experiências digitais memoráveis, um pixel de cada vez.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Navegação</h4>
+          <a href="#home">Início</a>
+          <a href="#about">Sobre</a>
+          <a href="#portfolio">Portfólio</a>
+          <a href="#contact">Contato</a>
+        </div>
+        <div class="footer-links">
+          <h4>Redes Sociais</h4>
+          <a href="#">GitHub</a>
+          <a href="#">LinkedIn</a>
+          <a href="#">Instagram</a>
+          <a href="#">Twitter</a>
+        </div>
+        <div class="footer-newsletter">
+          <h4>Newsletter</h4>
+          <p>Receba insights sobre desenvolvimento e design.</p>
+          <form class="newsletter-form" id="newsletterForm">
+            <input type="email" placeholder="seu@email.com" required>
+            <button type="submit"><i class="fas fa-paper-plane"></i></button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Lucas Pitaoborba. Todos os direitos reservados.</p>
+        <div class="footer-tech">
+          <span>Feito com</span>
+          <span class="tech-heart">♥</span>
+          <span>HTML</span>
+          <span class="tech-dot">·</span>
+          <span>CSS</span>
+          <span class="tech-dot">·</span>
+          <span>JavaScript</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- BACK TO TOP -->
+  <button class="back-to-top" id="backToTop" aria-label="Voltar ao topo">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
