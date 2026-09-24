@@ -7,50 +7,53 @@
   let particles = [];
   let mouse = { x: null, y: null };
   let animFrame;
+  let resizeTimeout;
 
   function resizeCanvas() {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(() => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+      initParticles();
+    }, 150);
   }
+
+  function initParticles() {
+    particles = [];
+    for (let i = 0; i < 80; i++) {
+      particles.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        size: Math.random() * 2 + 0.5,
+        speedX: (Math.random() - 0.5) * 0.5,
+        speedY: (Math.random() - 0.5) * 0.5,
+        color: ['#3B82F6', '#7C3AED', '#EC4899', '#60A5FA'][Math.floor(Math.random() * 4)],
+        opacity: Math.random() * 0.5 + 0.2,
+      });
+    }
+  }
+
   resizeCanvas();
   window.addEventListener('resize', resizeCanvas);
-
-  // Create particles
-  for (let i = 0; i < 80; i++) {
-    particles.push({
-      x: Math.random() * canvas.width,
-      y: Math.random() * canvas.height,
-      size: Math.random() * 2 + 0.5,
-      speedX: (Math.random() - 0.5) * 0.5,
-      speedY: (Math.random() - 0.5) * 0.5,
-      color: ['#3B82F6', '#7C3AED', '#EC4899', '#60A5FA'][Math.floor(Math.random() * 4)],
-      opacity: Math.random() * 0.5 + 0.2,
-    });
-  }
 
   function drawParticles() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
     particles.forEach((p) => {
-      // Move
       p.x += p.speedX;
       p.y += p.speedY;
 
-      // Wrap around
-      if (p.x < 0) p.x = canvas.width;
-      if (p.x > canvas.width) p.x = 0;
-      if (p.y < 0) p.y = canvas.height;
-      if (p.y > canvas.height) p.y = 0;
+      p.x = ((p.x % canvas.width) + canvas.width) % canvas.width;
+      p.y = ((p.y % canvas.height) + canvas.height) % canvas.height;
 
-      // Draw
       ctx.beginPath();
       ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
       ctx.fillStyle = p.color;
       ctx.globalAlpha = p.opacity;
       ctx.fill();
 
-      // Draw connections
       particles.forEach((p2) => {
+        if (p === p2) return;
         const dx = p.x - p2.x;
         const dy = p.y - p2.y;
         const dist = Math.sqrt(dx * dx + dy * dy);
@@ -85,14 +88,16 @@
   });
 
   hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('active');
+    const isActive = hamburger.classList.toggle('active');
     navLinks.classList.toggle('active');
+    hamburger.setAttribute('aria-expanded', isActive);
   });
 
   navLinks.querySelectorAll('a').forEach((link) => {
     link.addEventListener('click', () => {
       hamburger.classList.remove('active');
       navLinks.classList.remove('active');
+      hamburger.setAttribute('aria-expanded', 'false');
     });
   });
 })();
@@ -129,7 +134,6 @@
 
   document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
 
-  // Add reveal class to sections that don't have it
   document.querySelectorAll('section').forEach((section) => {
     if (!section.classList.contains('reveal')) {
       section.classList.add('reveal');
@@ -152,6 +156,7 @@
           animated = true;
           stats.forEach((stat) => {
             const target = parseInt(stat.dataset.target);
+            if (isNaN(target)) return;
             const duration = 2000;
             const step = target / (duration / 16);
             let current = 0;
@@ -172,7 +177,23 @@
   );
 
   const statsSection = document.querySelector('.stats');
-  if (statsSection) observer.observe(statsSection);
+  if (statsSection) {
+    observer.observe(statsSection);
+    const statsObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) {
+            animated = false;
+            stats.forEach((stat) => {
+              stat.textContent = '0';
+            });
+          }
+        });
+      },
+      { threshold: 0 }
+    );
+    statsObserver.observe(statsSection);
+  }
 })();
 
 /* ============================================
@@ -184,7 +205,6 @@
 
   filterBtns.forEach((btn) => {
     btn.addEventListener('click', () => {
-      // Update active button
       filterBtns.forEach((b) => b.classList.remove('active'));
       btn.classList.add('active');
 
@@ -194,9 +214,14 @@
         const category = card.dataset.category;
         if (filter === 'all' || category === filter) {
           card.classList.remove('hidden');
-          card.style.animation = 'fadeUp 0.4s ease forwards';
+          card.classList.add('show');
+          card.classList.remove('hide');
         } else {
-          card.classList.add('hidden');
+          card.classList.add('hide');
+          setTimeout(() => {
+            card.classList.add('hidden');
+            card.classList.remove('show');
+          }, 300);
         }
       });
     });
@@ -213,19 +238,28 @@
   form.addEventListener('submit', (e) => {
     e.preventDefault();
 
-    // Simulate submission
-    const btn = form.querySelector('button[type="submit"]');
-    const originalText = btn.querySelector('.btn-text').textContent;
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
 
-    btn.querySelector('.btn-text').textContent = '';
-    btn.querySelector('.btn-loader').innerHTML = '<span class="loader-spin"></span>';
+    const btn = form.querySelector('button[type="submit"]');
+    const btnText = btn.querySelector('.btn-text');
+    const btnLoader = btn.querySelector('.btn-loader');
+
+    if (!btnText || !btnLoader) return;
+
+    const originalText = btnText.textContent;
+
+    btnText.textContent = '';
+    btnLoader.innerHTML = '<span class="loader-spin"></span>';
     btn.disabled = true;
 
     setTimeout(() => {
       form.style.display = 'none';
       successMsg.style.display = 'block';
-      btn.querySelector('.btn-text').textContent = originalText;
-      btn.querySelector('.btn-loader').innerHTML = '';
+      btnText.textContent = originalText;
+      btnLoader.innerHTML = '';
       btn.disabled = false;
     }, 1500);
   });
@@ -243,6 +277,8 @@
     const input = form.querySelector('input');
     const btn = form.querySelector('button');
 
+    if (!input || !input.value) return;
+
     btn.innerHTML = '<i class="fas fa-check"></i>';
     btn.style.background = 'linear-gradient(135deg, #10B981, #059669)';
     input.value = '';
@@ -259,8 +295,10 @@
    ============================================ */
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener('click', function (e) {
+    const href = this.getAttribute('href');
+    if (href === '#' || href === '#!' || !href) return;
     e.preventDefault();
-    const target = document.querySelector(this.getAttribute('href'));
+    const target = document.querySelector(href);
     if (target) {
       target.scrollIntoView({ behavior: 'smooth' });
     }

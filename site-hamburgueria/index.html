@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boi Véio Hamburgueria — São José dos Campos</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=star_rate" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="logo">Boi<span>Véio</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Início</a></li>
+        <li><a href="#cardapio">Cardápio</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-bg">
+      <div class="hero-bg-overlay"></div>
+    </div>
+    <div class="hero-content">
+      <p class="hero-greeting">🔥 Hambúrgueres Artesanais 🔥</p>
+      <h1 class="hero-title">Boi Véio<br><span>Hamburgueria</span></h1>
+      <p class="hero-subtitle">Carnes suculentas, pão artesanal e o sabor que só o bom hambúrguer pode proporcionar. Localizada em São José dos Campos — venha provar!</p>
+      <div class="hero-buttons">
+        <a href="#cardapio" class="btn btn-primary">Ver Cardápio <i class="fas fa-arrow-down"></i></a>
+        <a href="#contato" class="btn btn-outline">Peça pelo WhatsApp</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <span class="stat-num">500+</span>
+          <span class="stat-label">Hambúrgueres servidos</span>
+        </div>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat">
+          <span class="stat-num">100%</span>
+          <span class="stat-label">Carne bovina</span>
+        </div>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat">
+          <span class="stat-num">4.9</span>
+          <span class="stat-label">Avaliação dos clientes</span>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <div class="mouse">
+        <div class="wheel"></div>
+      </div>
+      <span>Role para baixo</span>
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section class="about" id="sobre">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Nossa História</span>
+        <h2>Feito com <span class="highlight">Amor</span> e Carne</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-image">
+          <div class="image-wrapper">
+            <div class="image-placeholder-food">
+              <img src="https://images.unsplash.com/photo-1553979459-d2229ba7433b?w=600&q=80" alt="Preparando hambúrguer" loading="lazy">
+            </div>
+            <div class="accent-border-food"></div>
+          </div>
+        </div>
+        <div class="about-text">
+          <p class="about-lead">Saudade de um hambúrguer que te faz fechar os olhos de tanta satisfação!</p>
+          <p>A <strong>Boi Véio Hamburgueria</strong> nasceu em São José dos Campos com a missão de trazer para a cidade o verdadeiro sabor de carne bovina de qualidade. Cada hambúrguer é preparado com carinho, usando carnes selecionadas, pães artesanais e os melhores temperos.</p>
+          <p>Acreditamos que um bom hambúrguer é mais que comida — é uma experiência. Desde a escolha da carne até o momento em que você dá a primeira mordida, queremos que cada detalhe seja especial.</p>
+          <div class="skills">
+            <div class="skill-tag">Carne 100% Bovina</div>
+            <div class="skill-tag">Pão Artesanal</div>
+            <div class="skill-tag">Temperos Frescos</div>
+            <div class="skill-tag">Queijos Premium</div>
+            <div class="skill-tag">Cerveja Artesanal</div>
+            <div class="skill-tag">Feito na Brasa</div>
+          </div>
+          <div class="about-details">
+            <div class="detail-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <div>
+                <strong>Endereço</strong>
+                <p>Av. Dr. João Guilhermino, 529 - Centro<br>São José dos Campos - SP</p>
+              </div>
+            </div>
+            <div class="detail-item">
+              <i class="fas fa-clock"></i>
+              <div>
+                <strong>Horário</strong>
+                <p>Terça a Domingo: 11h30 às 23h<br>Segunda: Fechado</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CARDÁPIO -->
+  <section class="menu" id="cardapio">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Nosso Cardápio</span>
+        <h2>Sabores que <span class="highlight">Fazem Água na Boca</span></h2>
+        <p class="section-desc">Cada hambúrguer é uma obra-prima da culinária brasileira, feito com carnes selecionadas e ingredientes frescos.</p>
+      </div>
+      <div class="menu-grid">
+
+        <!-- Hambúrguer 1 -->
+        <div class="menu-card">
+          <div class="card-image-wrapper">
+            <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600&q=80" alt="Boi Véio Especial" class="card-img" loading="lazy">
+            <div class="card-img-overlay"></div>
+            <div class="menu-badge">Destaque</div>
+          </div>
+          <div class="menu-card-info">
+            <div class="menu-card-header">
+              <h3>Boi Véio Especial</h3>
+              <span class="menu-price">R$ 39,90</span>
+            </div>
+            <p class="menu-desc">Blend especial de carnes, queijo cheddar, cebola caramelizada, pickles e molho barbecue artesanal. O clássico que todo mundo pede!</p>
+            <div class="menu-tags">
+              <span>🍖 Carne Bovina</span>
+              <span>🧀 Cheddar</span>
+              <span>🍯 BBQ</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hambúrguer 2 -->
+        <div class="menu-card">
+          <div class="card-image-wrapper">
+            <img src="https://images.unsplash.com/photo-1553979459-d2229ba7433b?w=600&q=80" alt="Sertanejo Picante" class="card-img" loading="lazy">
+            <div class="card-img-overlay"></div>
+            <div class="menu-badge hot">🌶️ Picante</div>
+          </div>
+          <div class="menu-card-info">
+            <div class="menu-card-header">
+              <h3>Sertanejo Picante</h3>
+              <span class="menu-price">R$ 34,90</span>
+            </div>
+            <p class="menu-desc">Carne moída temperada, jalapeños, queijo mussarela, molho de pimenta caseiro e farofa crocante. Para os corajosos!</p>
+            <div class="menu-tags">
+              <span>🌶️ Picante</span>
+              <span>🌿 Jalapeño</span>
+              <span>🍳 Farofa</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hambúrguer 3 -->
+        <div class="menu-card">
+          <div class="card-image-wrapper">
+            <img src="https://images.unsplash.com/photo-1603064752734-4c48eff53d05?w=600&q=80" alt="Verde Sertão" class="card-img" loading="lazy">
+            <div class="card-img-overlay"></div>
+            <div class="menu-badge nova">🥬 Novidade</div>
+          </div>
+          <div class="menu-card-info">
+            <div class="menu-card-header">
+              <h3>Verde Sertão</h3>
+              <span class="menu-price">R$ 32,90</span>
+            </div>
+            <p class="menu-desc">Hambúrguer vegetariano com hambúrguer de feijão e grão-de-bico, abacate, tomate confit, rúcula e molho de castanha de caju.</p>
+            <div class="menu-tags">
+              <span>🥬 Vegetariano</span>
+              <span>🥑 Abacate</span>
+              <span>🌰 Castanha</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hambúrguer 4 -->
+        <div class="menu-card">
+          <div class="card-image-wrapper">
+            <img src="https://images.unsplash.com/photo-1550317138-10000687a72b?w=600&q=80" alt="Fogo de Chão" class="card-img" loading="lazy">
+            <div class="card-img-overlay"></div>
+            <div class="menu-badge premium"><span class="material-symbols-outlined">star_rate</span> Premium</div>
+          </div>
+          <div class="menu-card-info">
+            <div class="menu-card-header">
+              <h3>Fogo de Chão</h3>
+              <span class="menu-price">R$ 44,90</span>
+            </div>
+            <p class="menu-desc">Pão brioche artesanal, blend de ribeye e acém, queijo prato, cebola roxa grelhada, molho de alho e fritas crocantes. Feito na brasa!</p>
+            <div class="menu-tags">
+              <span><span class="material-symbols-outlined">star_rate</span> Premium</span>
+              <span>🥐 Brioche</span>
+              <span>🔥 Brasa</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hambúrguer 5 -->
+        <div class="menu-card">
+          <div class="card-image-wrapper">
+            <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?w=600&q=80" alt="O Caminhoneiro" class="card-img" loading="lazy">
+            <div class="card-img-overlay"></div>
+          </div>
+          <div class="menu-card-info">
+            <div class="menu-card-header">
+              <h3>O Caminhoneiro</h3>
+              <span class="menu-price">R$ 29,90</span>
+            </div>
+            <p class="menu-desc">Dois hambúrgueres de carne, dois ovos, bacon, queijo, presunto, alface, tomate e maionese caseira. O lanche que move a estrada!</p>
+            <div class="menu-tags">
+              <span>🥓 Triplo</span>
+              <span>🥓 Bacon</span>
+              <span>🥚 Ovo</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hambúrguer 6 -->
+        <div class="menu-card">
+          <div class="card-image-wrapper">
+            <img src="https://images.unsplash.com/photo-1590915063357-4cd7e69899ca?w=600&q=80" alt="Boi Véio Premium" class="card-img" loading="lazy">
+            <div class="card-img-overlay"></div>
+            <div class="menu-badge premium"><span class="material-symbols-outlined">star_rate</span>Premium</div>
+          </div>
+          <div class="menu-card-info">
+            <div class="menu-card-header">
+              <h3>Boi Véio Premium</h3>
+              <span class="menu-price">R$ 54,90</span>
+            </div>
+            <p class="menu-desc">Blend de Wagyu e Angus, pão de fermentação natural, queijo brie, cogumelos shitake grelhados, caramelizado de figo e molho de vinho tinto.</p>
+            <div class="menu-tags">
+              <span>🥩 Wagyu</span>
+              <span>🧀 Brie</span>
+              <span>🍷 Vinho</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- BEBIDAS & ACOMPANHAMENTOS -->
+  <section class="drinks">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Bebidas & Acompanhamentos</span>
+        <h2>Complete sua <span class="highlight">Experiência</span></h2>
+      </div>
+      <div class="drinks-grid">
+        <div class="drink-item">
+          <div class="drink-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1613904985222-0d534430bdbd?w=400&q=80" alt="Cerveja" class="drink-img" loading="lazy">
+          </div>
+          <h4>Cerveja Artesanal</h4>
+          <span class="drink-price">A partir de R$ 9,90</span>
+        </div>
+        <div class="drink-item">
+          <div class="drink-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1535990379313-5cd271a2da2d?w=400&q=80" alt="Refrigerante" class="drink-img" loading="lazy">
+          </div>
+          <h4>Refrigerantes</h4>
+          <span class="drink-price">R$ 6,90</span>
+        </div>
+        <div class="drink-item">
+          <div class="drink-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1600271886742-f049cd451bba?w=400&q=80" alt="Suco" class="drink-img" loading="lazy">
+          </div>
+          <h4>Suco Natural</h4>
+          <span class="drink-price">R$ 8,90</span>
+        </div>
+        <div class="drink-item">
+          <div class="drink-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=400&q=80" alt="Batata frita" class="drink-img" loading="lazy">
+          </div>
+          <h4>Batata Frita</h4>
+          <span class="drink-price">R$ 12,90</span>
+        </div>
+        <div class="drink-item">
+          <div class="drink-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1541592106381-b31e9677c0e5?w=400&q=80" alt="Batata doce" class="drink-img" loading="lazy">
+          </div>
+          <h4>Batata Doce</h4>
+          <span class="drink-price">R$ 14,90</span>
+        </div>
+        <div class="drink-item">
+          <div class="drink-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1598998834333-c0b91bc9b2a3?w=400&q=80" alt="Onion rings" class="drink-img" loading="lazy">
+          </div>
+          <h4>Onion Rings</h4>
+          <span class="drink-price">R$ 13,90</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DESTAQUES -->
+  <section class="highlights">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Por Que Nos Escolher</span>
+        <h2>Diferenciais que <span class="highlight">Impressionam</span></h2>
+      </div>
+      <div class="highlights-grid">
+        <div class="highlight-card">
+          <div class="highlight-icon">
+            <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?w=200&q=80" alt="Carne" loading="lazy">
+          </div>
+          <h3>Carnes Selecionadas</h3>
+          <p>Blend de carnes premium, escolhidas com cuidado para oferecer o melhor sabor e textura</p>
+        </div>
+        <div class="highlight-card">
+          <div class="highlight-icon">
+            <img src="https://images.unsplash.com/photo-1553979459-d2229ba7433b?w=200&q=80" alt="Pão" loading="lazy">
+          </div>
+          <h3>Pão Artesanal</h3>
+          <p>Massas fermentadas naturalmente, com casca crocante e miolo macio e fofinho</p>
+        </div>
+        <div class="highlight-card">
+          <div class="highlight-icon">
+            <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?w=200&q=80" alt="Prep" loading="lazy">
+          </div>
+          <h3>Preparo na Brasa</h3>
+          <p>Grelhados na brasa com carvão vegetal, dando aquele sabor autêntico e inconfundível</p>
+        </div>
+        <div class="highlight-card">
+          <div class="highlight-icon">
+            <img src="https://images.unsplash.com/photo-1613904985222-0d534430bdbd?w=200&q=80" alt="Drinks" loading="lazy">
+          </div>
+          <h3>Bebidas Especiais</h3>
+          <p>Cervejas artesanais nacionais e internacionais para acompanhar seus hambúrgueres</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section class="contact" id="contato">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Visite-nos!</span>
+        <h2>Venha Provar</h2>
+        <p class="section-desc">Localizada no coração de São José dos Campos. Venha sentir o cheiro do hambúrguer fresco!</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-card">
+            <div class="contact-icon">
+              <img src="https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?w=200&q=80" alt="Restaurante" loading="lazy">
+            </div>
+            <div>
+              <h4>Visite-nos</h4>
+              <p>Av. Dr. João Guilhermino, 529 - Centro<br>São José dos Campos - SP<br>CEP: 12500-000</p>
+            </div>
+          </div>
+          <div class="contact-card">
+            <div class="contact-icon">
+              <i class="fas fa-phone"></i>
+            </div>
+            <div>
+              <h4>Telefone</h4>
+              <p>(12) 3900-1234</p>
+            </div>
+          </div>
+          <div class="contact-card">
+            <div class="contact-icon">
+              <i class="fab fa-whatsapp"></i>
+            </div>
+            <div>
+              <h4>Faça seu Pedido</h4>
+              <p>(12) 99999-9999</p>
+              <p>Peça pelo WhatsApp! É rápido e fácil</p>
+            </div>
+          </div>
+          <div class="contact-socials">
+            <a href="#" class="contact-social" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="contact-social" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="contact-social" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="#" class="contact-social" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+        <form class="contact-form" id="contactForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Nome</label>
+              <input type="text" id="name" name="name" placeholder="Seu nome" autocomplete="name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">E-mail</label>
+              <input type="email" id="email" name="email" placeholder="seu@email.com" autocomplete="email" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="phone">Telefone</label>
+            <input type="tel" id="phone" name="phone" placeholder="(12) 9XXXX-XXXX">
+          </div>
+          <div class="form-group">
+            <label for="message">Mensagem</label>
+            <textarea id="message" name="message" rows="5" placeholder="Conte-nos sobre sua visita ou pedido..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">
+            <span class="btn-text">Enviar Mensagem</span>
+            <span class="btn-loader"></span>
+          </button>
+          <div class="form-success" id="formSuccess" style="display:none;">
+            <i class="fas fa-check-circle"></i>
+            <p>Mensagem enviada com sucesso! Vamos te responder em breve.</p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#home" class="logo">Boi<span>Véio</span></a>
+          <p>Hamburgueria artesanal no coração de São José dos Campos. Tradição sertaneja em cada mordida.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Navegação</h4>
+          <a href="#home">Início</a>
+          <a href="#cardapio">Cardápio</a>
+          <a href="#sobre">Sobre</a>
+          <a href="#contato">Contato</a>
+        </div>
+        <div class="footer-links">
+          <h4>Horário</h4>
+          <p>Terça a Domingo: 11h30 - 23h</p>
+          <p>Segunda: Fechado</p>
+          <p>Feriados: Consultar</p>
+        </div>
+        <div class="footer-newsletter">
+          <h4>Fique por Dentro</h4>
+          <p>Receba novidades e promoções!</p>
+          <form class="newsletter-form" id="newsletterForm">
+            <input type="email" placeholder="seu@email.com" required>
+            <button type="submit"><i class="fas fa-paper-plane"></i></button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Boi Véio Hamburgueria. Todos os direitos reservados.</p>
+        <div class="footer-tech">
+          <span>Feito com</span>
+          <span class="tech-heart">♥</span>
+          <span>Paixão</span>
+          <span class="tech-dot">·</span>
+          <span>São José dos Campos</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- BACK TO TOP -->
+  <button class="back-to-top" id="backToTop" aria-label="Voltar ao topo">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -21,7 +22,7 @@
         <li><a href="#portfolio">Portfólio</a></li>
         <li><a href="#contact">Contato</a></li>
       </ul>
-      <button class="hamburger" id="hamburger" aria-label="Menu">
+      <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="navLinks">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -140,8 +141,8 @@
                   <span>React</span><span>Node.js</span><span>MongoDB</span>
                 </div>
                 <div class="card-links">
-                  <a href="#" aria-label="Ver projeto"><i class="fas fa-external-link-alt"></i></a>
-                  <a href="#" aria-label="Código fonte"><i class="fab fa-github"></i></a>
+                  <a href="#" class="card-links-project" aria-label="Ver projeto"><i class="fas fa-external-link-alt"></i></a>
+                  <a href="#" class="card-links-code" aria-label="Código fonte"><i class="fab fa-github"></i></a>
                 </div>
               </div>
             </div>
@@ -165,8 +166,8 @@
                   <span>Figma</span><span>Illustrator</span><span>CSS</span>
                 </div>
                 <div class="card-links">
-                  <a href="#" aria-label="Ver projeto"><i class="fas fa-external-link-alt"></i></a>
-                  <a href="#" aria-label="Código fonte"><i class="fab fa-github"></i></a>
+                  <a href="#" class="card-links-project" aria-label="Ver projeto"><i class="fas fa-external-link-alt"></i></a>
+                  <a href="#" class="card-links-code" aria-label="Código fonte"><i class="fab fa-github"></i></a>
                 </div>
               </div>
             </div>
@@ -190,8 +191,8 @@
                   <span>React Native</span><span>Firebase</span><span>SVG</span>
                 </div>
                 <div class="card-links">
-                  <a href="#" aria-label="Ver projeto"><i class="fas fa-external-link-alt"></i></a>
-                  <a href="#" aria-label="Código fonte"><i class="fab fa-github"></i></a>
+                  <a href="#" class="card-links-project" aria-label="Ver projeto"><i class="fas fa-external-link-alt"></i></a>
+                  <a href="#" class="card-links-code" aria-label="Código fonte"><i class="fab fa-github"></i></a>
                 </div>
               </div>
             </div>
@@ -215,8 +216,8 @@
                   <span>Vue.js</span><span>D3.js</span><span>Express</span>
                 </div>
                 <div class="card-links">
-                  <a href="#" aria-label="Ver projeto"><i class="fas fa-external-link-alt"></i></a>
-                  <a href="#" aria-label="Código fonte"><i class="fab fa-github"></i></a>
+                  <a href="#" class="card-links-project" aria-label="Ver projeto"><i class="fas fa-external-link-alt"></i></a>
+                  <a href="#" class="card-links-code" aria-label="Código fonte"><i class="fab fa-github"></i></a>
                 </div>
               </div>
             </div>
@@ -240,8 +241,8 @@
                   <span>Storybook</span><span>TypeScript</span><span>CSS</span>
                 </div>
                 <div class="card-links">
-                  <a href="#" aria-label="Ver projeto"><i class="fas fa-external-link-alt"></i></a>
-                  <a href="#" aria-label="Código fonte"><i class="fab fa-github"></i></a>
+                  <a href="#" class="card-links-project" aria-label="Ver projeto"><i class="fas fa-external-link-alt"></i></a>
+                  <a href="#" class="card-links-code" aria-label="Código fonte"><i class="fab fa-github"></i></a>
                 </div>
               </div>
             </div>
@@ -265,8 +266,8 @@
                   <span>Flutter</span><span>Node.js</span><span>Mapbox</span>
                 </div>
                 <div class="card-links">
-                  <a href="#" aria-label="Ver projeto"><i class="fas fa-external-link-alt"></i></a>
-                  <a href="#" aria-label="Código fonte"><i class="fab fa-github"></i></a>
+                  <a href="#" class="card-links-project" aria-label="Ver projeto"><i class="fas fa-external-link-alt"></i></a>
+                  <a href="#" class="card-links-code" aria-label="Código fonte"><i class="fab fa-github"></i></a>
                 </div>
               </div>
             </div>
@@ -330,11 +331,11 @@
           <div class="form-row">
             <div class="form-group">
               <label for="name">Nome</label>
-              <input type="text" id="name" name="name" placeholder="Seu nome" required>
+              <input type="text" id="name" name="name" placeholder="Seu nome" autocomplete="name" required>
             </div>
             <div class="form-group">
               <label for="email">E-mail</label>
-              <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+              <input type="email" id="email" name="email" placeholder="seu@email.com" autocomplete="email" required>
             </div>
           </div>
           <div class="form-group">
